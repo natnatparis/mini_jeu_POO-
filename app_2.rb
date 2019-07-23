@@ -3,7 +3,6 @@ require 'bundler'
 Bundler.require
 
 # lignes qui appellent les fichiers lib/game.rb et lib/player.rb
-# comme ça, tu peux faire User.new dans ce fichier d'application. Top.
 require_relative 'lib/game'
 require_relative 'lib/player'
 
@@ -13,7 +12,7 @@ puts "        |Le but du jeu est d'être le dernier survivant !|"
 puts "        -------------------------------------------------"
 
 #Demande du nom du héros de notre jeu
-puts "Quel(le) est ton prénom ?"
+puts "Quel est ton prénom ?"
 print "> "
 first_name = gets.chomp
 
@@ -81,7 +80,7 @@ while user.life_points >0 && (player1.life_points > 0 || player2.life_points >0)
 	end
 end
 
-#Message de fin conditioné par l'issue
+#Message de fin conditioné par l'issue de la partie
 puts "La partie est finie"
 	if user.life_points > 0
 	puts "BRAVO ! TU AS GAGNE"

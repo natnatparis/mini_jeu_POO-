@@ -52,6 +52,7 @@ class HumanPlayer < Player
 
 	attr_accessor :weapon_level
 
+	#ajout de la variable weapon_level qui sera désormais dispo pour chacun de nos users
 	def initialize(name_str)
 		super (name_str)
 		@weapon_level = 1
@@ -82,7 +83,7 @@ class HumanPlayer < Player
 			end
 	end
 
-	#Méthode
+	#Méthode qui permettra à notre super héro de rechercher des packs de vie
 	def search_health_pack
 		dice = rand(1..6)
 		if dice == 1
