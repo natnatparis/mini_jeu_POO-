@@ -9,6 +9,6 @@ require_relative 'lib/player'
 
 #Player test à retirer
 player1 = Player.new("José")
-
+player2 = Player.new("Franck")
 
 binding.pry
