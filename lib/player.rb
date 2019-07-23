@@ -46,3 +46,39 @@ attr_accessor :name, :life_points
     return rand(1..6)
   	end
 end
+
+#Création d'une classe fille à partir de la classe mère Player
+class HumanPlayer < Player
+
+	attr_accessor :weapon_level
+
+	def initialize(name_str)
+		super (name_str)
+		@weapon_level = 1
+		@life_points = 100
+		
+	end
+
+	#Méthode permettant de compléter le message portant sur l'état de santé du joueur par le niveau de son arme"
+	def show_state
+		super
+		print " et une arme de niveau #{@weapon_level}"
+	end
+
+	#Méthode permettant de multiplier les dommages subit par un joueur en fonction du niveau de l'arme utilisée
+	def compute_damage
+		super * @weapon_level
+	end
+
+	#Méthode 
+	def search_weapon
+		dice = rand(1..6)
+		puts "Tu as trouvé une arme de niveau #{dice}"
+			if dice > @weapon_level
+				@weapon_level = dice
+				puts "Youhou ! Elle est meilleure que ton arme actuelle : tu la prends."
+			else 
+				puts "M@*#$... elle n'est pas mieux que ton arme actuelle..."
+			end
+	end
+end

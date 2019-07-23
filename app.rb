@@ -7,6 +7,11 @@ Bundler.require
 require_relative 'lib/game'
 require_relative 'lib/player'
 
+#Création d'un HumanPlayer
+humanplayer1 = HumanPlayer.new("Zelda")
+
+binding.pry
+
 #Création des players
 player1 = Player.new("Josiane")
 player2 = Player.new("José")
@@ -19,7 +24,7 @@ puts "----------------------------"
 
 # Boucle permettant de suivre le combat jusqu'à la mort d'un combattant
 
-while player1.life_points > 0 && player1.life_points > 0
+while player1.life_points > 0 && player2.life_points > 0
 	puts "Voici l'état de chaque joueur:" 
 	puts player1.show_state
 	puts player2.show_state
@@ -33,5 +38,3 @@ while player1.life_points > 0 && player1.life_points > 0
 	
 end
 
-
-#binding.pry
