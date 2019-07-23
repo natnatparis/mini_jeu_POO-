@@ -38,19 +38,11 @@ attr_accessor :name, :life_points
 		else
 		puts "il lui inflige #{damage_received} points de dommages"
 		end
-
-		player_receiver.gets_damage(damage_received)
-
-		
+		player_receiver.gets_damage(damage_received)	
 	end
 
 	#Méthode permettant de générer un dommage de manière aléatoire entre 1 et 6 
 	def compute_damage
     return rand(1..6)
   	end
-
-
-
-
-
 end

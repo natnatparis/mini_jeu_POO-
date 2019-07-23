@@ -17,7 +17,7 @@ puts "À ma droite #{player1.name}"
 puts "À ma gauche #{player2.name}"
 puts "----------------------------"
 
-#Etat de santé initial des combattants (on veut un combat équitable)
+# Boucle permettant de suivre le combat jusqu'à la mort d'un combattant
 
 while player1.life_points > 0 && player1.life_points > 0
 	puts "Voici l'état de chaque joueur:" 
