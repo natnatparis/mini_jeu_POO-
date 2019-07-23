@@ -2,9 +2,9 @@
 require 'bundler'
 Bundler.require
 
-# lignes qui appellent les fichiers lib/user.rb et lib/event.rb
+# lignes qui appellent les fichiers lib/game.rb et lib/player.rb
 # comme ça, tu peux faire User.new dans ce fichier d'application. Top.
-require_relative 'lib/user'
-require_relative 'lib/event'
+require_relative 'lib/game'
+require_relative 'lib/player'
 
 binding.pry
