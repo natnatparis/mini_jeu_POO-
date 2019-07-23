@@ -7,4 +7,8 @@ Bundler.require
 require_relative 'lib/game'
 require_relative 'lib/player'
 
+#Player test à retirer
+player1 = Player.new("José")
+
+
 binding.pry
